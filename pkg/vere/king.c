@@ -419,7 +419,7 @@ king_curl_bytes(c3_c* url_c, c3_w* len_w, c3_y** hun_y, c3_t veb_t, c3_y tri_y)
   curl_easy_setopt(cul_u, CURLOPT_HEADERDATA, (void*)&buf_u);
   curl_easy_setopt(cul_u, CURLOPT_WRITEFUNCTION, king_curl_alloc);
   curl_easy_setopt(cul_u, CURLOPT_WRITEDATA, (void*)&buf_u);
-  curl_easy_setopt(cul_u, CURLOPT_SERVER_RESPONSE_TIMEOUT, 30);
+  curl_easy_setopt(cul_u, CURLOPT_SERVER_RESPONSE_TIMEOUT, 30L);
 
   while ( tri_y > try_y ) {
     sleep(try_y++);
